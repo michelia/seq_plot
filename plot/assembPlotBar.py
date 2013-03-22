@@ -39,7 +39,8 @@ def main():
                         help='this is the depth data file path')
     parser.add_argument('figurePrefix', 
                         help='the figure save prefix')
-    parser.add_argument('-f', '--format', default='png', choices = ['png', 'svg'],
+    parser.add_argument('-f', '--format', default='png', 
+                        choices = ['png', 'svg'],
                         dest='format',
                         help='Figure save format. If this is not, save the figure as png.')
     args = parser.parse_args()
@@ -108,15 +109,15 @@ def plot_fun(dataPath, depthDataPath, figurePrefix, format):
     plt.savefig(figurePrefix+'.'+format, dpi=1000)
 
 
-def compress_depth(depthData, start, end, compression=5):
-    length = end - start
-    for i in count():
-        comFrom = start + i * compression
-        comTo = comFrom + compression
-        if comTo > end:
-            yield (comFrom+comTo)/2, (sum(depthData[comFrom:])/len(depthData[comFrom:]))
-        else:
-            yield (comFrom+comTo)/2, (sum(depthData[comFrom:comTo])/compression)
+# def compress_depth(depthData, start, end, compression=5):
+#     length = end - start
+#     for i in count():
+#         comFrom = start + i * compression
+#         comTo = comFrom + compression
+#         if comTo > end:
+#             yield (comFrom+comTo)/2, (sum(depthData[comFrom:])/len(depthData[comFrom:]))
+#         else:
+#             yield (comFrom+comTo)/2, (sum(depthData[comFrom:comTo])/compression)
 
 
 def parse_data(dataPath):
