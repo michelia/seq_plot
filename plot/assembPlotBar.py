@@ -1,3 +1,4 @@
+#encoding=utf8
 #! /usr/bin/python
 
 #########################################################
@@ -25,6 +26,7 @@ from michelia import vzebra, hzebra, data_dump, data_load, adjust_spines
 
 function = '''
 Plot the assemb quality and the sequencing depth relation.
+主要是画横向的柱型图
 '''
 
 
