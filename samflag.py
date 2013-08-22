@@ -73,7 +73,7 @@ flag ={'0x1': 'template having multiple segments in sequencing',
         # not primary alignment
         # read fails platform/vendor quality checks
         # read is PCR or optical duplicate
-
+# 另外这里也有解释 http://bowtie-bio.sourceforge.net/bowtie2/manual.shtml#some-sam-flags-describe-paired-end-properties 
 
 if __name__ == '__main__':
     print
