@@ -1,4 +1,5 @@
-#! /usr/bin/python
+#!/usr/bin/env python
+#encoding=utf8
 
 #########################################################
 # Program: samflag.py
@@ -60,6 +61,18 @@ flag ={'0x1': 'template having multiple segments in sequencing',
         '0x100': 'secondary alignment',
         '0x200': 'not passing quality controls',
         '0x400': 'PCR or optical duplicate'}
+# 下面是flag的另一种解释， 来源： http://picard.sourceforge.net/explain-flags.html 可以查看页面的源代码，下面的行与上面是一一对应的
+        # read paired
+        # read mapped in proper pair
+        # read unmapped
+        # mate unmapped
+        # read reverse strand
+        # mate reverse strand
+        # first in pair
+        # second in pair
+        # not primary alignment
+        # read fails platform/vendor quality checks
+        # read is PCR or optical duplicate
 
 
 if __name__ == '__main__':
